@@ -1,0 +1,37 @@
+
+INSERT INTO public.movies (title, description, director, actors, year, category, resolution, poster_url, backdrop_url, is_premium, is_featured, content_type) VALUES
+('The Last Horizon', 'A team of astronauts embarks on humanity''s most daring mission to save Earth from an approaching cosmic anomaly.', 'Elena Vasquez', ARRAY['Chris Evans', 'Zendaya', 'Oscar Isaac'], 2025, ARRAY['Sci-Fi', 'Adventure', 'Drama'], '4K', 'https://images.unsplash.com/photo-1534996858221-380b92700493?w=500', 'https://images.unsplash.com/photo-1534996858221-380b92700493?w=1200', false, true, 'movie'),
+
+('Shadow Protocol', 'When a rogue AI threatens global security, an elite black-ops team must navigate a web of deception to prevent catastrophe.', 'James Chen', ARRAY['Keanu Reeves', 'Ana de Armas', 'Idris Elba'], 2024, ARRAY['Action', 'Thriller'], '4K', 'https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?w=500', 'https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?w=1200', false, true, 'movie'),
+
+('Echoes of Tomorrow', 'A brilliant physicist discovers she can communicate with her future self, but every message changes the timeline in unexpected ways.', 'Sofia Nakamura', ARRAY['Florence Pugh', 'Pedro Pascal', 'Lupita Nyong''o'], 2025, ARRAY['Sci-Fi', 'Drama', 'Thriller'], '4K', 'https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=500', 'https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=1200', true, true, 'movie'),
+
+('Crimson Fury', 'A former special forces operative is pulled back into action when his daughter is kidnapped by an international arms dealer.', 'Michael Bay', ARRAY['Dwayne Johnson', 'Gal Gadot', 'Jason Statham'], 2024, ARRAY['Action', 'Thriller'], '1080p', 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=500', 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=1200', false, false, 'movie'),
+
+('Steel Thunder', 'In a dystopian future, underground fighters compete in deadly mech battles for freedom.', 'Park Jin-woo', ARRAY['John Boyega', 'Karen Fukuhara', 'Dave Bautista'], 2023, ARRAY['Action', 'Sci-Fi'], '4K', 'https://images.unsplash.com/photo-1535016120720-40c646be5580?w=500', 'https://images.unsplash.com/photo-1535016120720-40c646be5580?w=1200', false, false, 'movie'),
+
+('Love in the Algorithm', 'Two rival app developers accidentally match on their own dating platform and must pretend to date for a tech conference.', 'Greta Gerwig', ARRAY['Ryan Gosling', 'Margot Robbie', 'Awkwafina'], 2024, ARRAY['Comedy', 'Romance'], '1080p', 'https://images.unsplash.com/photo-1485846234645-a62644f84728?w=500', 'https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1200', false, false, 'movie'),
+
+('The Grand Heist', 'A bumbling crew of amateur thieves attempt to rob a billionaire''s vault during the world''s most exclusive party.', 'Taika Waititi', ARRAY['Jack Black', 'Aubrey Plaza', 'Ke Huy Quan'], 2023, ARRAY['Comedy', 'Adventure'], '1080p', 'https://images.unsplash.com/photo-1518676590747-1e3dcf5a8e0f?w=500', 'https://images.unsplash.com/photo-1518676590747-1e3dcf5a8e0f?w=1200', false, false, 'movie'),
+
+('The Hollow', 'A family moves into a centuries-old manor only to discover the house has a terrifying consciousness of its own.', 'Jordan Peele', ARRAY['Lupita Nyong''o', 'Daniel Kaluuya', 'Toni Collette'], 2024, ARRAY['Horror', 'Thriller'], '4K', 'https://images.unsplash.com/photo-1509248961895-40216d3f4f09?w=500', 'https://images.unsplash.com/photo-1509248961895-40216d3f4f09?w=1200', true, false, 'movie'),
+
+('Whispers in the Dark', 'A podcaster investigating urban legends discovers that the stories are real — and something is listening.', 'Ari Aster', ARRAY['Jenna Ortega', 'Barry Keoghan', 'Mia Goth'], 2025, ARRAY['Horror', 'Drama'], '1080p', 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=500', 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=1200', false, false, 'movie'),
+
+('The Weight of Stars', 'An aging astronomer reflects on a lifetime of discovery and the personal sacrifices made in pursuit of the unknown.', 'Denis Villeneuve', ARRAY['Anthony Hopkins', 'Cate Blanchett', 'Timothée Chalamet'], 2024, ARRAY['Drama'], '4K', 'https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=500', 'https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=1200', false, false, 'movie'),
+
+('Broken Strings', 'A once-famous violinist battles addiction while mentoring a young prodigy from the streets.', 'Barry Jenkins', ARRAY['Viola Davis', 'Timothée Chalamet', 'Mahershala Ali'], 2023, ARRAY['Drama', 'Romance'], '1080p', 'https://images.unsplash.com/photo-1524712245354-2c4e5e7121c0?w=500', 'https://images.unsplash.com/photo-1524712245354-2c4e5e7121c0?w=1200', false, false, 'movie'),
+
+('Starbound', 'A young girl and her robot companion journey across galaxies to find her missing father.', 'Hayao Miyazaki', ARRAY['Animated'], 2024, ARRAY['Animation', 'Adventure', 'Sci-Fi'], '4K', 'https://images.unsplash.com/photo-1534447677768-be436bb09401?w=500', 'https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1200', false, false, 'movie'),
+
+('Planet Reborn', 'An awe-inspiring look at Earth''s most remarkable ecosystems and the people fighting to protect them.', 'David Attenborough', ARRAY['David Attenborough'], 2024, ARRAY['Documentary', 'Adventure'], '4K', 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=500', 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1200', false, false, 'movie'),
+
+('The Code', 'A group of hackers uncover a conspiracy that connects the world''s largest tech companies to a shadowy organization.', 'Sam Esmail', ARRAY['Rami Malek', 'Brie Larson', 'Steven Yeun'], 2024, ARRAY['Thriller', 'Drama', 'Sci-Fi'], '4K', 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500', 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200', true, true, 'series'),
+
+('Kingdom of Ashes', 'In a medieval fantasy world, rival houses wage war for control of a magical throne that grants immortality.', 'Miguel Sapochnik', ARRAY['Henry Cavill', 'Anya Taylor-Joy', 'Dev Patel'], 2025, ARRAY['Action', 'Drama', 'Adventure'], '4K', 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=500', 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1200', false, true, 'series'),
+
+('Night Shift', 'The chaotic and hilarious lives of overnight ER doctors at a wildly understaffed hospital.', 'Greg Daniels', ARRAY['Donald Glover', 'Maya Rudolph', 'Bo Burnham'], 2024, ARRAY['Comedy', 'Drama'], '1080p', 'https://images.unsplash.com/photo-1504439468489-c8920d796a29?w=500', 'https://images.unsplash.com/photo-1504439468489-c8920d796a29?w=1200', false, false, 'series'),
+
+('Depths Unknown', 'A deep-sea research team discovers an ancient civilization thriving beneath the ocean floor.', 'James Cameron', ARRAY['Kate Winslet', 'John David Washington', 'Michelle Yeoh'], 2025, ARRAY['Sci-Fi', 'Adventure', 'Thriller'], '4K', 'https://images.unsplash.com/photo-1551244072-5d12893278ab?w=500', 'https://images.unsplash.com/photo-1551244072-5d12893278ab?w=1200', true, false, 'series'),
+
+('Culinary Wars', 'Elite chefs from around the world compete in extreme cooking challenges in the most unusual locations on Earth.', 'Jon Favreau', ARRAY['Gordon Ramsay', 'Padma Lakshmi'], 2024, ARRAY['Documentary', 'Comedy'], '1080p', 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500', 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200', false, false, 'series');
