@@ -1,0 +1,10 @@
+{
+	"appId": "com.thewaymmofficial.mvstream",
+	"appName": "Kyi Mal",
+	"webDir": "dist",
+	"plugins": {
+		"StatusBar": {
+			"overlaysWebView": true
+		}
+	}
+}
