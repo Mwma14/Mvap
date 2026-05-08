@@ -1,0 +1,373 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Cineverse Premium - Cinematic Theme */
+
+@layer base {
+  /* Light mode - Warm beige theme */
+  :root {
+    --background: 40 20% 94%;
+    --foreground: 30 10% 15%;
+
+    --card: 40 15% 98%;
+    --card-foreground: 30 10% 15%;
+
+    --popover: 40 15% 98%;
+    --popover-foreground: 30 10% 15%;
+
+    --primary: 0 72% 51%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 40 10% 88%;
+    --secondary-foreground: 30 10% 20%;
+
+    --muted: 40 10% 85%;
+    --muted-foreground: 30 10% 40%;
+
+    --accent: 40 10% 88%;
+    --accent-foreground: 30 10% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 40 10% 80%;
+    --input: 40 10% 80%;
+    --ring: 0 72% 51%;
+
+    --radius: 0.5rem;
+
+    /* Cineverse custom tokens */
+    --cg-gold: 45 93% 47%;
+    --cg-premium: 280 100% 65%;
+    --cg-success: 142 76% 36%;
+    --cg-glass: 30 10% 15% / 0.06;
+    --cg-glass-border: 30 10% 15% / 0.1;
+
+    --sidebar-background: 40 15% 98%;
+    --sidebar-foreground: 30 10% 15%;
+    --sidebar-primary: 0 72% 51%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 40 10% 88%;
+    --sidebar-accent-foreground: 30 10% 15%;
+    --sidebar-border: 40 10% 80%;
+    --sidebar-ring: 0 72% 51%;
+  }
+
+  /* Dark mode - Deep cinematic black throughout */
+  .dark {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 96%;
+
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 96%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 96%;
+
+    --primary: 0 72% 51%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 96%;
+
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 0 0% 12%;
+    --accent-foreground: 0 0% 96%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 16%;
+    --input: 0 0% 16%;
+    --ring: 0 72% 51%;
+
+    /* Cineverse custom tokens - dark mode */
+    --cg-glass: 0 0% 100% / 0.05;
+    --cg-glass-border: 0 0% 100% / 0.1;
+
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 0 72% 51%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 0 0% 16%;
+    --sidebar-ring: 0 72% 51%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  /* Custom scrollbar for the app */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground));
+  }
+}
+
+@layer components {
+  /* Glass morphism effect */
+  .glass {
+    background: hsl(var(--cg-glass));
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--cg-glass-border));
+  }
+
+  /* Fix for admin settings mobile overflow */
+  [data-radix-collapsible-root],
+  [data-radix-collapsible-content] {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  /* Premium badge gradient */
+  .premium-badge {
+    background: linear-gradient(135deg, hsl(var(--cg-gold)), hsl(var(--cg-premium)));
+  }
+
+  /* Movie card hover effect */
+  .movie-card {
+    @apply relative overflow-hidden rounded-lg transition-all duration-300 ease-out;
+  }
+
+  .movie-card:hover {
+    @apply scale-105 z-10;
+    box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.8);
+  }
+
+  /* Focus states for TV/D-pad navigation */
+  .tv-focus:focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
+  }
+
+  /* Hero gradient overlay */
+  .hero-gradient {
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.7) 30%,
+      rgba(0, 0, 0, 0.4) 60%,
+      transparent 100%
+    );
+  }
+
+  .hero-gradient-bottom {
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(0, 0, 0, 0.7) 30%,
+      transparent 100%
+    );
+  }
+
+  /* Light mode: blend hero to light background */
+  :root .hero-gradient-bottom {
+    background: linear-gradient(
+      to top,
+      hsl(40 20% 94% / 1) 0%,
+      hsl(40 20% 94% / 0.9) 10%,
+      rgba(0, 0, 0, 0.8) 35%,
+      transparent 100%
+    );
+  }
+
+  .dark .hero-gradient-bottom {
+    background: linear-gradient(
+      to top,
+      hsl(0 0% 4% / 1) 0%,
+      hsl(0 0% 4% / 0.9) 10%,
+      rgba(0, 0, 0, 0.7) 35%,
+      transparent 100%
+    );
+  }
+
+  /* Horizontal scroll container */
+  .scroll-row {
+    @apply flex gap-3 overflow-x-auto pb-4 scrollbar-hide;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .scroll-row > * {
+    scroll-snap-align: start;
+  }
+
+  /* Hide scrollbar utility */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Safe area for mobile bottom nav - with Android WebView fallback */
+  .safe-area-bottom {
+    padding-bottom: max(16px, env(safe-area-inset-bottom, 16px));
+  }
+
+  /* Add padding to main content for mobile bottom nav */
+  .mobile-nav-spacing {
+    @apply pb-28 md:pb-0;
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+
+  .safe-area-top {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+
+  .safe-area-x {
+    padding-left: env(safe-area-inset-left, 0px);
+    padding-right: env(safe-area-inset-right, 0px);
+  }
+
+  /* Theme toggle with red ring in dark mode */
+  .dark .theme-toggle-ring {
+    @apply ring-2 ring-primary ring-offset-1 ring-offset-background;
+  }
+
+  /* Lamp glow effect for Cineverse logo */
+  .lamp-element {
+    transform-origin: bottom center;
+  }
+
+  .lamp-svg {
+    filter: drop-shadow(0 0 6px hsl(45 93% 47% / 0.7)) drop-shadow(0 0 14px hsl(45 93% 47% / 0.4));
+  }
+
+  /* MovieKyiMal logo pulse animation for spinner */
+  @keyframes logo-pulse-spin {
+    0% { opacity: 0.75; transform: scale(0.92); }
+    25% { opacity: 1; transform: scale(1.06); }
+    50% { opacity: 1; transform: scale(1); }
+    75% { opacity: 1; transform: scale(1.06); }
+    100% { opacity: 0.75; transform: scale(0.92); }
+  }
+
+  /* Loading spinner logo animation - loops continuously */
+  @keyframes logo-fade-up-loop {
+    0% { opacity: 0; transform: translateY(12px); }
+    30% { opacity: 1; transform: translateY(0); }
+    70% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-8px); }
+  }
+
+  @keyframes logo-squish-loop {
+    0%, 25% { transform: scaleY(1) scaleX(1); }
+    35% { transform: scaleY(0.5) scaleX(1.2); }
+    45% { transform: scaleY(1.15) scaleX(0.9); }
+    55% { transform: scaleY(0.95) scaleX(1.02); }
+    65%, 100% { transform: scaleY(1) scaleX(1); }
+  }
+
+  @keyframes logo-lamp-loop {
+    0%, 20% { opacity: 0; transform: translateY(-20px); }
+    35% { opacity: 1; transform: translateY(2px); }
+    42% { transform: translateY(-3px); }
+    50% { opacity: 1; transform: translateY(0); }
+    70% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-20px); }
+  }
+
+  .logo-letter-anim {
+    opacity: 0;
+    animation: logo-fade-up-loop 2s ease-in-out infinite;
+  }
+
+  .logo-squish-anim {
+    animation: logo-fade-up-loop 2s ease-in-out infinite, logo-squish-loop 2s ease-in-out infinite;
+  }
+
+  .logo-lamp-anim {
+    opacity: 0;
+    animation: logo-lamp-loop 2s ease-in-out infinite;
+  }
+}
+
+@layer utilities {
+  /* Text gradient utility */
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--cg-gold)));
+  }
+
+  /* Shimmer animation for skeleton loading */
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s infinite;
+  }
+
+  /* Page transition utilities */
+  .page-enter {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  .page-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 200ms ease-out, transform 200ms ease-out;
+  }
+
+  .page-exit {
+    opacity: 1;
+  }
+
+  .page-exit-active {
+    opacity: 0;
+    transition: opacity 150ms ease-in;
+  }
+
+  /* Fix tall admin dialogs on mobile - ensure they fit in viewport */
+  @media (max-width: 640px) {
+    .admin-fullscreen-dialog[role="dialog"][data-state="open"] {
+      top: 0 !important;
+      left: 0 !important;
+      transform: none !important;
+      width: 100% !important;
+      max-height: 100dvh !important;
+      height: 100dvh !important;
+      border-radius: 0 !important;
+    }
+  }
+
+  /* TV Player Fullscreen Mode - hide all navigation when player is fullscreen */
+  body.tv-player-fullscreen nav {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+}
