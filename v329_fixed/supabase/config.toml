@@ -1,0 +1,7 @@
+project_id = "etzmugoczmafilemiqaz"
+
+[functions.telegram-bot]
+verify_jwt = false
+
+[functions.telegram-stream]
+verify_jwt = false
