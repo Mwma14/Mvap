@@ -1,0 +1,1 @@
+ALTER TABLE public.movies ADD COLUMN mx_player_url TEXT DEFAULT NULL;
