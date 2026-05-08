@@ -1,0 +1,1 @@
+ALTER TABLE public.football_videos ADD COLUMN show_in_replay boolean NOT NULL DEFAULT false;
