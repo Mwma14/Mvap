@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Network Security Config for Kyi Mal
+  
+  Allows the app to:
+  1. Connect to any HTTPS domain (for video streaming from bot proxy)
+  2. Use cleartext HTTP where needed (legacy support)
+  3. Trust system CAs for all domains
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>
