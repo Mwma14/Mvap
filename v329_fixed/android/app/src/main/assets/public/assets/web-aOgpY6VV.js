@@ -1,0 +1,1 @@
+import{W as n}from"./index-C9KaIx75.js";class e extends n{async setNavigationBarColor(o){console.log("Cannot setNavigationBarColor on web",o)}async getNavigationBarColor(){return console.log("Cannot getNavigationBarColor on web"),{color:"#000000",darkButtons:!0}}async getPluginVersion(){return{version:"web"}}}export{e as NavigationBarWeb};
