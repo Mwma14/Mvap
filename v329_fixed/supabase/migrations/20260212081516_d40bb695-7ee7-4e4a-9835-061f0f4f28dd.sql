@@ -1,0 +1,1 @@
+INSERT INTO site_settings (key, value) VALUES ('live_tv_sources', '[{"url":"https://raw.githubusercontent.com/bugsfreeweb/LiveTVCollector/main/LiveTV/Arabic/LiveTV.json","enabled":true}]') ON CONFLICT (key) DO NOTHING;
