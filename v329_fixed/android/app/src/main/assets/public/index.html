@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      (function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(t!=='light'&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark')}}catch(e){}})();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Kyi Mal - Your Ultimate Streaming Destination</title>
+    <meta name="description" content="Stream your favorite movies and TV shows on Kyi Mal. High-quality streaming with 4K support, exclusive content, and more.">
+    <meta name="author" content="Kyi Mal" />
+
+    
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/Yr4T0LfMogQSS83HqY7i8o50RBI2/social-images/social-1771345946382-036c45a3-824b-4413-85ad-98db5e1c3e3c.webp">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Cineverse" />
+    <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/Yr4T0LfMogQSS83HqY7i8o50RBI2/social-images/social-1771345946382-036c45a3-824b-4413-85ad-98db5e1c3e3c.webp">
+    
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      .il-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;width:100vw;position:fixed;top:0;left:0;z-index:9999;background:hsl(40 20% 94%);gap:1.5rem}
+      .dark .il-wrap{background:hsl(0 0% 4%)}
+      .il-logo{position:relative;display:flex;align-items:flex-end;height:2.5rem;overflow:visible}
+      .il-letter{display:inline-block;font-size:1.5rem;font-weight:700;letter-spacing:0.1em;color:hsl(30 10% 15%);opacity:0;animation:il-loop 2s ease-in-out infinite}
+      .dark .il-letter{color:hsl(0 0% 96%)}
+      .il-letter:nth-child(1){animation-delay:0ms}
+      .il-letter:nth-child(2){animation:il-loop 2s ease-in-out infinite,il-squish 2s ease-in-out infinite;animation-delay:80ms,80ms}
+      .il-letter:nth-child(3){animation-delay:160ms}
+      .il-letter:nth-child(4){animation-delay:240ms}
+      .il-letter:nth-child(5){animation-delay:320ms}
+      .il-letter:nth-child(6){animation-delay:400ms}
+      .il-letter:nth-child(7){animation-delay:480ms}
+      .il-letter:nth-child(8){animation-delay:560ms}
+      .il-letter:nth-child(9){animation-delay:640ms}
+      .il-lamp{position:absolute;top:-0.7em;opacity:0;animation:il-lamp 2s ease-in-out infinite;pointer-events:none}
+      .il-wrap{transition:opacity 0.7s ease-out,transform 0.7s ease-out,filter 0.7s ease-out}
+      .il-fade-out{opacity:0!important;transform:scale(1.08)!important;filter:blur(6px)!important;pointer-events:none!important}
+      .il-lamp svg{color:hsl(45 93% 47%);filter:drop-shadow(0 0 6px hsl(45 93% 47% / 0.7)) drop-shadow(0 0 14px hsl(45 93% 47% / 0.4))}
+      .il-msg{font-size:0.875rem;color:hsl(30 10% 40%);animation:il-pulse 2s ease-in-out infinite}
+      .dark .il-msg{color:hsl(0 0% 60%)}
+      .il-progress{width:clamp(160px,40vw,280px);height:3px;background:hsl(30 10% 15% / 0.12);border-radius:2px;overflow:hidden;margin-top:-0.5rem}
+      .dark .il-progress{background:hsl(0 0% 96% / 0.1)}
+      .il-progress-bar{height:100%;width:0;background:linear-gradient(90deg,hsl(45 93% 47%),hsl(45 93% 57%));border-radius:2px;animation:il-fill 3s cubic-bezier(0.4,0.0,0.2,1) forwards;box-shadow:0 0 6px hsl(45 93% 47% / 0.6),0 0 14px hsl(45 93% 47% / 0.3);filter:brightness(1);animation:il-fill 3s cubic-bezier(0.4,0,0.2,1) forwards,il-bar-glow 2s ease-in-out infinite}
+      @keyframes il-fill{0%{width:0}40%{width:55%}70%{width:78%}90%{width:88%}100%{width:95%}}
+      @keyframes il-bar-glow{0%,100%{box-shadow:0 0 4px hsl(45 93% 47% / 0.5),0 0 10px hsl(45 93% 47% / 0.2);filter:brightness(1)}50%{box-shadow:0 0 8px hsl(45 93% 47% / 0.8),0 0 20px hsl(45 93% 47% / 0.4);filter:brightness(1.15)}}
+      @keyframes il-loop{0%{opacity:0;transform:translateY(12px)}30%{opacity:1;transform:translateY(0)}70%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(-8px)}}
+      @keyframes il-squish{0%,25%{transform:scaleY(1) scaleX(1)}35%{transform:scaleY(0.5) scaleX(1.2)}45%{transform:scaleY(1.15) scaleX(0.9)}55%{transform:scaleY(0.95) scaleX(1.02)}65%,100%{transform:scaleY(1) scaleX(1)}}
+      @keyframes il-lamp{0%,20%{opacity:0;transform:translateY(-20px)}35%{opacity:1;transform:translateY(2px)}42%{transform:translateY(-3px)}50%{opacity:1;transform:translateY(0)}70%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(-20px)}}
+      @keyframes il-pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+      @keyframes il-logo-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.7;transform:scale(0.95)}}
+    </style>
+      <meta property="og:title" content="Kyi Mal - Your Ultimate Streaming Destination">
+  <meta name="twitter:title" content="Kyi Mal - Your Ultimate Streaming Destination">
+  <meta property="og:description" content="Stream your favorite movies and TV shows on Kyi Mal. High-quality streaming with 4K support, exclusive content, and more.">
+  <meta name="twitter:description" content="Stream your favorite movies and TV shows on Kyi Mal. High-quality streaming with 4K support, exclusive content, and more.">
+  <script type="module" crossorigin src="/assets/index-C9KaIx75.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-y-BswV0e.css">
+</head>
+
+  <body>
+    <script>
+      // Fix for Android WebView: SVGAnimatedString doesn't have string methods
+      try {
+        if (typeof SVGAnimatedString !== 'undefined') {
+          var proto = SVGAnimatedString.prototype;
+          if (!proto.includes) {
+            proto.includes = function(s) { return this.baseVal.includes(s); };
+          }
+          if (!proto.indexOf) {
+            proto.indexOf = function(s) { return this.baseVal.indexOf(s); };
+          }
+          if (!proto.startsWith) {
+            proto.startsWith = function(s) { return this.baseVal.startsWith(s); };
+          }
+        }
+      } catch(e) {}
+    </script>
+    <div id="root"><div class="il-wrap"><div class="il-logo" style="display:flex;align-items:center;gap:10px;height:auto"><img src="/kyi-mal-icon.png" alt="Kyi Mal" style="height:50px;width:50px;border-radius:50%;object-fit:contain;animation:il-logo-pulse 2s ease-in-out infinite" /><span style="font-size:1.4rem;font-weight:700;background:linear-gradient(135deg,#a855f7,#ec4899,#f97316);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:0.05em">MovieKyiMal</span></div><div class="il-progress"><div class="il-progress-bar" id="il-bar"></div></div><p class="il-msg">Loading...</p></div></div>
+    <script>
+      (function(){var i=document.getElementById('il-i'),l=document.querySelector('.il-lamp'),c=document.querySelector('.il-logo');if(i&&l&&c){var cr=c.getBoundingClientRect(),ir=i.getBoundingClientRect();l.style.left=(ir.left+ir.width/2-cr.left-9)+'px'}})();
+    </script>
+  </body>
+</html>
