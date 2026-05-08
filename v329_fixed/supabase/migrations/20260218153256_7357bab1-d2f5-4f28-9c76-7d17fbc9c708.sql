@@ -1,0 +1,1 @@
+INSERT INTO site_settings (key, value) VALUES ('telegram_bot_api_url', NULL);
