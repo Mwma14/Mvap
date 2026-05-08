@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Kyi Mal</string>
+    <string name="title_activity_main">Kyi Mal</string>
+    <string name="package_name">com.thewaymmofficial.mvstream</string>
+    <string name="custom_url_scheme">com.thewaymmofficial.mvstream</string>
+</resources>
